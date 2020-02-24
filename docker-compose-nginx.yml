@@ -1,0 +1,14 @@
+version: '2'
+services:
+  proxy:
+    build: nginx/
+    ports:
+    - 80:80
+    networks:
+    - net
+    hostname: proxy
+    container_name: proxy
+
+networks:
+  net:
+    driver: bridge
